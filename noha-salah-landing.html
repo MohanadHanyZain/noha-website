@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff7f8" />
+  <meta name="description" content="نوها صلاح — تدريب أونلاين ومتابعة تساعدك تبني عادات صحية تناسب حياتك." />
+  <title>نوها صلاح | تدريب أونلاين</title>
+
+  <!-- Tailwind CDN — مناسب لملف HTML واحد -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rosepetal: '#f8dfe5',
+            blush: '#fff4f5',
+            berry: '#a63f62',
+            plum: '#512b40',
+            ink: '#392832',
+            sand: '#f8f0e9'
+          },
+          fontFamily: {
+            arabic: ['Cairo', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 18px 55px rgba(111, 48, 75, .10)',
+            rose: '0 12px 32px rgba(166, 63, 98, .22)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root { color-scheme: light; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body { font-family: 'Cairo', sans-serif; }
+    ::selection { background: #f2c8d5; color: #512b40; }
+    .grain {
+      background-image: radial-gradient(rgba(166,63,98,.09) .7px, transparent .7px);
+      background-size: 12px 12px;
+    }
+    .hero-orb { background: radial-gradient(circle at 35% 30%, #fff 0, #f9e4e9 42%, #efc4d1 100%); }
+    .image-frame { position: relative; isolation: isolate; }
+    .image-frame::before {
+      content: ""; position: absolute; inset: 14px -12px -12px 14px;
+      border: 1px solid rgba(166,63,98,.30); border-radius: 2rem; z-index: -1;
+    }
+    .result-card img, .testimonial-image img, .certificate-card img { transition: transform .55s cubic-bezier(.2,.7,.2,1); }
+    .result-card:hover img, .testimonial-image:hover img, .certificate-card:hover img { transform: scale(1.035); }
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .menu-open { display: flex !important; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body class="bg-[#fffaf9] text-ink antialiased">
+  <!-- عدّلي أسماء ملفات الصور فقط، وخلي كل ملفات PNG في نفس مكان ملف HTML -->
+  <!-- WhatsApp: استبدلي 201000000000 بالرقم الحقيقي بصيغة دولية من غير + أو مسافات -->
+  <!-- Facebook: استبدلي الرابط الموجود في الفوتر برابط صفحة نوها الحقيقي -->
+
+  <header class="fixed inset-x-0 top-0 z-50 border-b border-rose-100/70 bg-[#fffaf9]/90 backdrop-blur-xl">
+    <div class="mx-auto flex h-[76px] max-w-7xl items-center justify-between px-5 sm:px-8">
+      <a href="#home" class="group flex items-center gap-3" aria-label="نوها صلاح - الرئيسية">
+        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-berry text-white shadow-rose transition group-hover:-rotate-6">
+          <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 20s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 10c0 5.65-7 10-7 10Z"/><path d="M8.5 12.2h2l1.2-2.4 1.5 4 1-1.6h1.3"/></svg>
+        </span>
+        <span class="leading-tight">
+          <span class="block text-base font-extrabold tracking-tight text-plum">نوها صلاح</span>
+          <span class="mt-0.5 block text-[10px] font-bold tracking-[.18em] text-berry" dir="ltr">NOHA SALAH</span>
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-8 text-sm font-bold text-plum/75 md:flex" aria-label="القائمة الرئيسية">
+        <a class="transition hover:text-berry" href="#about">عن نوها</a>
+        <a class="transition hover:text-berry" href="#reviews">آراء العملاء</a>
+        <a class="transition hover:text-berry" href="#results">النتائج</a>
+        <a class="transition hover:text-berry" href="#certificates">الشهادات</a>
+      </nav>
+
+      <a href="https://wa.me/201017270247?text=%D8%A3%D9%87%D9%84%D8%A7%20%D9%8A%D8%A7%20%D9%83%D9%88%D8%AA%D8%B4%20%D9%86%D9%88%D9%87%D8%A7%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%D8%A9%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83." target="_blank" rel="noopener noreferrer" class="hidden rounded-full bg-berry px-5 py-3 text-sm font-extrabold text-white shadow-rose transition hover:-translate-y-0.5 hover:bg-plum sm:inline-flex">ابدئي رحلتك <span class="mr-2" aria-hidden="true">↗</span></a>
+
+      <button id="menuButton" class="grid h-11 w-11 place-items-center rounded-xl border border-rose-100 text-plum md:hidden" aria-label="فتح القائمة" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+    <nav id="mobileMenu" class="hidden flex-col gap-1 border-t border-rose-100 bg-[#fffaf9] px-5 py-4 text-sm font-bold text-plum md:hidden" aria-label="قائمة الموبايل">
+      <a class="rounded-xl px-3 py-3 hover:bg-blush" href="#about">عن نوها</a>
+      <a class="rounded-xl px-3 py-3 hover:bg-blush" href="#reviews">آراء العملاء</a>
+      <a class="rounded-xl px-3 py-3 hover:bg-blush" href="#results">النتائج</a>
+      <a class="rounded-xl px-3 py-3 hover:bg-blush" href="#certificates">الشهادات</a>
+      <a class="mt-2 rounded-xl bg-berry px-3 py-3 text-center text-white" href="https://wa.me/201017270247?text=%D8%A3%D9%87%D9%84%D8%A7%20%D9%8A%D8%A7%20%D9%83%D9%88%D8%AA%D8%B4%20%D9%86%D9%88%D9%87%D8%A7%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%D8%A9%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83." target="_blank" rel="noopener noreferrer">اسألي عن الاشتراك</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="relative isolate overflow-hidden pb-20 pt-32 sm:pb-28 sm:pt-40">
+      <div class="pointer-events-none absolute -right-24 top-24 -z-10 h-72 w-72 rounded-full bg-rosepetal/60 blur-3xl"></div>
+      <div class="pointer-events-none absolute -left-24 bottom-0 -z-10 h-80 w-80 rounded-full bg-[#f6e9dc]/70 blur-3xl"></div>
+      <div class="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-20">
+        <div class="reveal order-2 lg:order-1">
+          <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-rose-200 bg-white/80 px-4 py-2 text-xs font-extrabold text-berry shadow-sm sm:text-sm">
+            <span class="h-2 w-2 rounded-full bg-berry"></span>
+            تدريب أونلاين • متابعة على مقاسك
+          </div>
+          <h1 class="max-w-2xl text-4xl font-black leading-[1.45] tracking-tight text-plum sm:text-5xl lg:text-[3.65rem]">
+            خليكي أقرب<br class="hidden sm:block"> <span class="relative inline-block text-berry">للنسخة اللي بتحبيها</span> من نفسك.
+          </h1>
+          <p class="mt-6 max-w-xl text-base leading-8 text-plum/70 sm:text-lg sm:leading-9">
+            مع كوتش نوها صلاح، خطوتك الجاية تبقى أوضح. خطة تناسب يومك، متابعة تشجّعك، ورحلة بتتعمل واحدة واحدة — من غير ضغط الكمال.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <a href="https://wa.me/201017270247?text=%D8%A3%D9%87%D9%84%D8%A7%20%D9%8A%D8%A7%20%D9%83%D9%88%D8%AA%D8%B4%20%D9%86%D9%88%D9%87%D8%A7%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%D8%A9%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 rounded-full bg-berry px-7 py-4 font-extrabold text-white shadow-rose transition hover:-translate-y-1 hover:bg-plum">
+              اعرفي تفاصيل الاشتراك
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+            </a>
+            <a href="#about" class="inline-flex items-center justify-center gap-2 rounded-full border border-rose-200 bg-white/70 px-7 py-4 font-bold text-plum transition hover:border-berry hover:text-berry">اتعرفي على نوها <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="mt-9 flex items-center gap-4 border-t border-rose-100 pt-6">
+            <div class="flex -space-x-2 space-x-reverse" aria-hidden="true">
+              <span class="grid h-9 w-9 place-items-center rounded-full border-2 border-[#fffaf9] bg-[#f1d4dc] text-xs font-black text-berry">ن</span>
+              <span class="grid h-9 w-9 place-items-center rounded-full border-2 border-[#fffaf9] bg-[#e9d7c7] text-xs font-black text-plum">♡</span>
+              <span class="grid h-9 w-9 place-items-center rounded-full border-2 border-[#fffaf9] bg-[#eadfe9] text-xs font-black text-berry">✦</span>
+            </div>
+            <p class="text-xs font-semibold leading-6 text-plum/65 sm:text-sm">كل رحلة ليها ظروفها…<br class="sm:hidden"> والمهم تلاقي الطريقة اللي تناسبك.</p>
+          </div>
+        </div>
+        <div class="reveal order-1 mx-auto w-full max-w-[510px] lg:order-2">
+          <div class="relative mx-auto max-w-[440px]">
+            <div class="hero-orb absolute -inset-5 rotate-6 rounded-[2.8rem] sm:-inset-7"></div>
+            <div class="image-frame overflow-hidden rounded-[2.3rem] border-[7px] border-white bg-rosepetal shadow-soft">
+              <img src="noha-hero.png" alt="صورة كوتش نوها صلاح" class="aspect-[4/5] w-full object-cover" fetchpriority="high">
+            </div>
+            <div class="absolute -bottom-5 -right-4 flex items-center gap-3 rounded-2xl border border-white/80 bg-white/95 px-4 py-3 shadow-soft sm:-right-9 sm:px-5">
+              <span class="grid h-11 w-11 place-items-center rounded-xl bg-blush text-berry">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+              </span>
+              <span><span class="block text-sm font-extrabold text-plum">خطوة بخطوة</span><span class="mt-0.5 block text-xs text-plum/60">على حسب هدفك وروتينك</span></span>
+            </div>
+            <span class="absolute -left-4 top-8 grid h-14 w-14 place-items-center rounded-2xl bg-berry text-2xl text-white shadow-rose sm:-left-8">✿</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT / POSITIONING -->
+    <section id="about" class="relative overflow-hidden bg-plum py-16 text-white sm:py-20">
+      <div class="grain pointer-events-none absolute inset-0 opacity-30"></div>
+      <div class="relative mx-auto grid max-w-7xl gap-10 px-5 sm:px-8 md:grid-cols-[.7fr_1.3fr] md:items-center">
+        <div class="reveal">
+          <p class="text-xs font-extrabold tracking-[.2em] text-[#f2bacb]" dir="ltr">A LITTLE ABOUT THE JOURNEY</p>
+          <h2 class="mt-4 text-3xl font-black leading-relaxed sm:text-4xl">مش لازم تبقي مثالية…<br><span class="text-[#f2bacb]">المهم تكمّلي بطريقتك.</span></h2>
+        </div>
+        <div class="reveal md:border-r md:border-white/15 md:pr-10">
+          <p class="max-w-3xl text-base leading-9 text-white/75 sm:text-lg">التغيير الحقيقي مش قرار يوم واحد؛ هو اختيارات صغيرة بتتكرر، وخطة واقعية تقدري تلتزمي بيها. هنا هتلاقي مساحة تبدأي منها، وتسألي عن التفاصيل اللي تناسب هدفك.</p>
+          <a href="https://wa.me/201017270247?text=%D8%A3%D9%87%D9%84%D8%A7%20%D9%83%D9%88%D8%AA%D8%B4%20%D9%86%D9%88%D9%87%D8%A7%D8%8C%20%D9%85%D9%85%D9%83%D9%86%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%A3%D9%86%D8%B3%D8%A8%20%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC%20%D9%84%D9%8A%D8%A7%D8%9F" target="_blank" rel="noopener noreferrer" class="mt-6 inline-flex items-center gap-2 font-extrabold text-[#f2bacb] transition hover:gap-4">خلينا نتكلم <span aria-hidden="true">←</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS: replace the 3 PNGs -->
+    <section id="reviews" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="reveal mb-10 flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="text-xs font-extrabold tracking-[.2em] text-berry" dir="ltr">REAL WORDS, REAL JOURNEYS</p>
+            <h2 class="mt-3 text-3xl font-black text-plum sm:text-4xl">كلامهم يحكي <span class="text-berry">تجربتهم</span></h2>
+          </div>
+          <p class="max-w-md text-sm leading-7 text-plum/60">اسحبي الصور أو افتحيها علشان تشوفي آراء العميلات كاملة.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <button type="button" class="testimonial-image reveal group overflow-hidden rounded-[1.7rem] border border-rose-100 bg-white p-2 text-right shadow-soft focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="review-1.png" aria-label="تكبير رأي العميلة الأول">
+            <div class="overflow-hidden rounded-[1.25rem] bg-blush"><img src="review-1.png" alt="رأي العميلة الأولى" loading="lazy" class="aspect-[4/5] w-full object-contain"></div>
+            <div class="flex items-center justify-between px-3 py-4"><span class="font-extrabold text-plum">رأي عميلة</span><span class="grid h-9 w-9 place-items-center rounded-full bg-blush text-berry transition group-hover:bg-berry group-hover:text-white">↗</span></div>
+          </button>
+          <button type="button" class="testimonial-image reveal group overflow-hidden rounded-[1.7rem] border border-rose-100 bg-white p-2 text-right shadow-soft focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="review-2.png" aria-label="تكبير رأي العميلة الثاني">
+            <div class="overflow-hidden rounded-[1.25rem] bg-blush"><img src="review-2.png" alt="رأي العميلة الثانية" loading="lazy" class="aspect-[4/5] w-full object-contain"></div>
+            <div class="flex items-center justify-between px-3 py-4"><span class="font-extrabold text-plum">رأي عميلة</span><span class="grid h-9 w-9 place-items-center rounded-full bg-blush text-berry transition group-hover:bg-berry group-hover:text-white">↗</span></div>
+          </button>
+          <button type="button" class="testimonial-image reveal group overflow-hidden rounded-[1.7rem] border border-rose-100 bg-white p-2 text-right shadow-soft focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="review-3.png" aria-label="تكبير رأي العميلة الثالث">
+            <div class="overflow-hidden rounded-[1.25rem] bg-blush"><img src="review-3.png" alt="رأي العميلة الثالثة" loading="lazy" class="aspect-[4/5] w-full object-contain"></div>
+            <div class="flex items-center justify-between px-3 py-4"><span class="font-extrabold text-plum">رأي عميلة</span><span class="grid h-9 w-9 place-items-center rounded-full bg-blush text-berry transition group-hover:bg-berry group-hover:text-white">↗</span></div>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS: image-only cards, no invented claims -->
+    <section id="results" class="overflow-hidden bg-[#fbf0f2] py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="reveal mb-10 text-center">
+          <p class="text-xs font-extrabold tracking-[.2em] text-berry" dir="ltr">PROGRESS GALLERY</p>
+          <h2 class="mt-3 text-3xl font-black text-plum sm:text-4xl">نتايج ورحلات <span class="text-berry">تستاهل الفخر</span></h2>
+          <p class="mx-auto mt-4 max-w-2xl text-sm leading-8 text-plum/65 sm:text-base">كل جسم وتجربة مختلفين؛ الصور هنا بتعرض رحلات العميلات زي ما هي، من غير مقارنة بين حد والتاني.</p>
+        </div>
+        <div class="grid gap-5 sm:grid-cols-3">
+          <button type="button" class="result-card reveal group overflow-hidden rounded-[1.7rem] border border-white bg-white p-2 shadow-soft focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="result-1.png" aria-label="تكبير صورة النتيجة الأولى"><img src="result-1.png" alt="صورة النتيجة الأولى" loading="lazy" class="aspect-[4/5] w-full rounded-[1.25rem] object-contain bg-white"><span class="flex items-center justify-between px-3 py-4 text-sm font-extrabold text-plum"><span>رحلة عميلة</span><span class="text-berry">↗</span></span></button>
+          <button type="button" class="result-card reveal group overflow-hidden rounded-[1.7rem] border border-white bg-white p-2 shadow-soft focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="result-2.png" aria-label="تكبير صورة النتيجة الثانية"><img src="result-2.png" alt="صورة النتيجة الثانية" loading="lazy" class="aspect-[4/5] w-full rounded-[1.25rem] object-contain bg-white"><span class="flex items-center justify-between px-3 py-4 text-sm font-extrabold text-plum"><span>رحلة عميلة</span><span class="text-berry">↗</span></span></button>
+          <button type="button" class="result-card reveal group overflow-hidden rounded-[1.7rem] border border-white bg-white p-2 shadow-soft focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="result-3.png" aria-label="تكبير صورة النتيجة الثالثة"><img src="result-3.png" alt="صورة النتيجة الثالثة" loading="lazy" class="aspect-[4/5] w-full rounded-[1.25rem] object-contain bg-white"><span class="flex items-center justify-between px-3 py-4 text-sm font-extrabold text-plum"><span>رحلة عميلة</span><span class="text-berry">↗</span></span></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES: 12 PNG files -->
+    <section id="certificates" class="py-20 sm:py-28">
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="reveal mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-xs font-extrabold tracking-[.2em] text-berry" dir="ltr">LEARNING & DEVELOPMENT</p>
+            <h2 class="mt-3 text-3xl font-black text-plum sm:text-4xl">الشهادات <span class="text-berry">والاعتمادات</span></h2>
+          </div>
+          <p class="max-w-md text-sm leading-7 text-plum/60">اضغطي على أي شهادة علشان تشوفيها بحجم أكبر.</p>
+        </div>
+        <div class="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-5 lg:grid-cols-4">
+          <button type="button" class="certificate-card reveal overflow-hidden rounded-2xl border border-rose-100 bg-white p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="certificate-01.png" aria-label="عرض الشهادة الأولى"><img src="certificate-01.png" alt="الشهادة الأولى" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-contain"></button>
+          <button type="button" class="certificate-card reveal overflow-hidden rounded-2xl border border-rose-100 bg-white p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="certificate-02.png" aria-label="عرض الشهادة الثانية"><img src="certificate-02.png" alt="الشهادة الثانية" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-contain"></button>
+          <button type="button" class="certificate-card reveal overflow-hidden rounded-2xl border border-rose-100 bg-white p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="certificate-03.png" aria-label="عرض الشهادة الثالثة"><img src="certificate-03.png" alt="الشهادة الثالثة" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-contain"></button>
+          <button type="button" class="certificate-card reveal overflow-hidden rounded-2xl border border-rose-100 bg-white p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="certificate-04.png" aria-label="عرض الشهادة الرابعة"><img src="certificate-04.png" alt="الشهادة الرابعة" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-contain"></button>
+          <button type="button" class="certificate-card reveal overflow-hidden rounded-2xl border border-rose-100 bg-white p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="certificate-05.png" aria-label="عرض الشهادة الخامسة"><img src="certificate-05.png" alt="الشهادة الخامسة" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-contain"></button>
+          <button type="button" class="certificate-card reveal overflow-hidden rounded-2xl border border-rose-100 bg-white p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="certificate-06.png" aria-label="عرض الشهادة السادسة"><img src="certificate-06.png" alt="الشهادة السادسة" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-contain"></button>
+          <button type="button" class="certificate-card reveal overflow-hidden rounded-2xl border border-rose-100 bg-white p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="certificate-07.png" aria-label="عرض الشهادة السابعة"><img src="certificate-07.png" alt="الشهادة السابعة" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-contain"></button>
+          <button type="button" class="certificate-card reveal overflow-hidden rounded-2xl border border-rose-100 bg-white p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="certificate-08.png" aria-label="عرض الشهادة الثامنة"><img src="certificate-08.png" alt="الشهادة الثامنة" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-contain"></button>
+          <button type="button" class="certificate-card reveal overflow-hidden rounded-2xl border border-rose-100 bg-white p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="certificate-09.png" aria-label="عرض الشهادة التاسعة"><img src="certificate-09.png" alt="الشهادة التاسعة" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-contain"></button>
+          <button type="button" class="certificate-card reveal overflow-hidden rounded-2xl border border-rose-100 bg-white p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="certificate-10.png" aria-label="عرض الشهادة العاشرة"><img src="certificate-10.png" alt="الشهادة العاشرة" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-contain"></button>
+          <button type="button" class="certificate-card reveal overflow-hidden rounded-2xl border border-rose-100 bg-white p-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-berry" data-lightbox="certificate-11.png" aria-label="عرض الشهادة الحادية عشرة"><img src="certificate-11.png" alt="الشهادة الحادية عشرة" loading="lazy" class="aspect-[4/3] w-full rounded-xl object-contain"></button>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="px-5 pb-20 sm:px-8 sm:pb-28">
+      <div class="relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] bg-[#f4dce3] shadow-soft sm:rounded-[2.5rem]">
+        <div class="absolute -left-16 -top-20 h-64 w-64 rounded-full border-[40px] border-white/20"></div>
+        <div class="relative grid items-center gap-8 p-7 sm:p-10 md:grid-cols-[1fr_.72fr] md:p-14 lg:p-16">
+          <div class="reveal">
+            <p class="text-xs font-extrabold tracking-[.2em] text-berry" dir="ltr">YOUR NEXT CHAPTER</p>
+            <h2 class="mt-4 max-w-2xl text-3xl font-black leading-relaxed text-plum sm:text-4xl lg:text-5xl">جاهزة تاخدي أول خطوة؟</h2>
+            <p class="mt-4 max-w-xl text-base leading-8 text-plum/75">ابعتي لكوتش نوها، احكي لها عن هدفك، واسألي عن نظام المتابعة والتفاصيل المناسبة ليكي.</p>
+            <a href="https://wa.me/201017270247?text=%D8%A3%D9%87%D9%84%D8%A7%20%D9%83%D9%88%D8%AA%D8%B4%20%D9%86%D9%88%D9%87%D8%A7%D8%8C%20%D8%AD%D8%A7%D8%A8%D8%A9%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83." target="_blank" rel="noopener noreferrer" class="mt-7 inline-flex items-center justify-center gap-3 rounded-full bg-plum px-7 py-4 font-extrabold text-white transition hover:-translate-y-1 hover:bg-berry">كلميني على واتساب <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="reveal mx-auto w-full max-w-[360px] md:ml-0">
+            <div class="rotate-2 overflow-hidden rounded-[1.8rem] border-[7px] border-white bg-white shadow-soft transition duration-500 hover:rotate-0">
+              <img src="noha-cta1.png" alt="صورة كوتش نوها صلاح" loading="lazy" class="aspect-[4/5] w-full object-cover">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-plum text-white">
+    <div class="mx-auto max-w-7xl px-5 py-12 sm:px-8 sm:py-14">
+      <div class="grid gap-10 border-b border-white/15 pb-10 sm:grid-cols-2 sm:items-start">
+        <div>
+          <a href="#home" class="inline-flex items-center gap-3">
+            <span class="grid h-11 w-11 place-items-center rounded-2xl bg-white/10 text-[#f2bacb]">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 20s-7-4.35-7-10a4 4 0 0 1 7-2.65A4 4 0 0 1 19 10c0 5.65-7 10-7 10Z"/></svg>
+            </span>
+            <span><span class="block font-extrabold">نوها صلاح</span><span class="text-[10px] font-bold tracking-[.18em] text-[#f2bacb]" dir="ltr">NOHA SALAH</span></span>
+          </a>
+          <p class="mt-4 max-w-md text-sm leading-8 text-white/65">ابدئي من مكانك، وبالطريقة اللي تناسب حياتك. خطوة صغيرة النهارده تفرق مع الوقت.</p>
+        </div>
+        <div class="sm:justify-self-end">
+          <h3 class="font-extrabold">خلينا على تواصل</h3>
+          <div class="mt-4 flex flex-wrap gap-3">
+            <a href="https://wa.me/201017270247?text=%D8%A3%D9%87%D9%84%D8%A7%20%D9%83%D9%88%D8%AA%D8%B4%20%D9%86%D9%88%D9%87%D8%A7" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold transition hover:border-[#f2bacb] hover:bg-white/5"><span aria-hidden="true">◉</span> واتساب</a>
+            <!-- ضعي رابط صفحة فيسبوك الحقيقي مكان #facebook-page -->
+            <a href="https://www.facebook.com/share/1HR7XGgYt8/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/20 px-5 py-3 text-sm font-bold transition hover:border-[#f2bacb] hover:bg-white/5"><span aria-hidden="true">f</span> فيسبوك</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-3 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span id="year"></span> نوها صلاح. جميع الحقوق محفوظة.</p>
+        <a href="#home" class="font-bold transition hover:text-white">اطلعي لفوق ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/201017270247?text=%D8%A3%D9%87%D9%84%D8%A7%20%D9%83%D9%88%D8%AA%D8%B4%20%D9%86%D9%88%D9%87%D8%A7%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%D8%A9%20%D8%A3%D8%B9%D8%B1%D9%81%20%D8%AA%D9%81%D8%A7%D8%B5%D9%8A%D9%84%20%D8%A7%D9%84%D8%A7%D8%B4%D8%AA%D8%B1%D8%A7%D9%83." target="_blank" rel="noopener noreferrer" aria-label="تواصلي مع نوها على واتساب" class="fixed bottom-5 left-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-[#25D366] text-white shadow-lg transition hover:-translate-y-1 hover:scale-105">
+    <svg viewBox="0 0 32 32" class="h-7 w-7" fill="currentColor" aria-hidden="true"><path d="M16.02 3C8.86 3 3.04 8.79 3.04 15.92c0 2.28.6 4.51 1.74 6.48L3 29l6.79-1.77a13.05 13.05 0 0 0 6.23 1.58h.01c7.15 0 12.97-5.8 12.97-12.92A12.88 12.88 0 0 0 16.02 3Zm0 23.62h-.01a10.8 10.8 0 0 1-5.5-1.5l-.4-.23-4.03 1.05 1.08-3.91-.26-.41a10.7 10.7 0 0 1-1.65-5.7c0-5.93 4.84-10.75 10.78-10.75a10.7 10.7 0 0 1 7.62 3.15 10.63 10.63 0 0 1 3.16 7.6c0 5.92-4.84 10.7-10.79 10.7Zm5.91-8.04c-.32-.16-1.9-.93-2.2-1.03-.3-.11-.51-.16-.73.16-.21.32-.84 1.03-1.03 1.24-.19.22-.38.24-.7.08-.32-.16-1.35-.5-2.57-1.58-.95-.84-1.59-1.88-1.78-2.2-.19-.32-.02-.49.14-.65.14-.14.32-.38.48-.57.16-.19.21-.32.32-.54.11-.21.06-.4-.03-.57-.08-.16-.73-1.75-1-2.39-.27-.63-.54-.54-.73-.55h-.62c-.22 0-.57.08-.87.4-.3.32-1.14 1.11-1.14 2.7 0 1.59 1.16 3.12 1.32 3.34.16.21 2.28 3.48 5.52 4.88.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.4.19-1.53-.08-.13-.3-.21-.62-.37Z"/></svg>
+  </a>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-[100] hidden items-center justify-center bg-plum/90 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-label="عرض الصورة المكبرة">
+    <button id="closeLightbox" type="button" class="absolute left-4 top-4 grid h-12 w-12 place-items-center rounded-full bg-white text-2xl font-bold text-plum shadow-lg" aria-label="إغلاق الصورة">×</button>
+    <img id="lightboxImage" src="" alt="" class="max-h-[88vh] max-w-[94vw] rounded-xl object-contain shadow-2xl">
+  </div>
+
+  <script>
+    // القائمة للموبايل
+    const menuButton = document.getElementById('menuButton');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuButton.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.toggle('menu-open');
+      menuButton.setAttribute('aria-expanded', String(isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'إغلاق القائمة' : 'فتح القائمة');
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mobileMenu.classList.remove('menu-open');
+      menuButton.setAttribute('aria-expanded', 'false');
+    }));
+
+    // تكبير الصور بالضغط عليها
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightboxImage');
+    const closeLightbox = document.getElementById('closeLightbox');
+    let lastFocusedElement = null;
+    document.querySelectorAll('[data-lightbox]').forEach(card => {
+      card.addEventListener('click', () => {
+        lastFocusedElement = card;
+        lightboxImage.src = card.dataset.lightbox;
+        const thumb = card.querySelector('img');
+        lightboxImage.alt = thumb ? thumb.alt : 'صورة مكبرة';
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+        closeLightbox.focus();
+      });
+    });
+    function hideLightbox() {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      lightboxImage.src = '';
+      document.body.style.overflow = '';
+      if (lastFocusedElement) lastFocusedElement.focus();
+    }
+    closeLightbox.addEventListener('click', hideLightbox);
+    lightbox.addEventListener('click', event => { if (event.target === lightbox) hideLightbox(); });
+    document.addEventListener('keydown', event => { if (event.key === 'Escape' && !lightbox.classList.contains('hidden')) hideLightbox(); });
+
+    // ظهور الأقسام تدريجياً عند النزول
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+      revealItems.forEach(item => observer.observe(item));
+    } else {
+      revealItems.forEach(item => item.classList.add('is-visible'));
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
